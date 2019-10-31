@@ -1,11 +1,11 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPause,
-  faPlay,
-  faStepBackward,
-  faStepForward
-} from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+// faPause,
+// faPlay,
+// faStepBackward,
+// faStepForward
+// } from "@fortawesome/free-solid-svg-icons";
 
 function PlayerControls(props) {
   return (
@@ -20,7 +20,8 @@ function PlayerControls(props) {
             onClick={props.playPreviousTrack}
             disabled={!props.currentTrackName}
           >
-            <FontAwesomeIcon icon={faStepBackward} />
+            <i className="fas fa-step-backward"></i>
+            {/* <FontAwesomeIcon icon={faStepBackward} /> */}
           </button>
           <button
             className="button has-text-light has-background-grey-dark"
@@ -28,9 +29,11 @@ function PlayerControls(props) {
             disabled={!props.currentTrackName}
           >
             {props.isPlaying ? (
-              <FontAwesomeIcon icon={faPause} />
+              <i className="fas fa-pause"></i>
             ) : (
-              <FontAwesomeIcon icon={faPlay} />
+              // <FontAwesomeIcon icon={faPause} />
+              <i className="fas fa-play"></i>
+              // <FontAwesomeIcon icon={faPlay} />
             )}
           </button>
           <button
@@ -38,7 +41,8 @@ function PlayerControls(props) {
             onClick={props.playNextTrack}
             disabled={!props.currentTrackName}
           >
-            <FontAwesomeIcon icon={faStepForward} />
+            <i className="fas fa-step-forward"></i>
+            {/* <FontAwesomeIcon icon={faStepForward} /> */}
           </button>
         </div>
       </div>
